@@ -1,4 +1,4 @@
-package riviera
+package org.riv.scalaztest
 
 import org.scalatest.FunSuite 
 import scalaz._
