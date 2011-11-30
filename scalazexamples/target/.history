@@ -1,0 +1,59 @@
+compile
+package
+install
+console
+run
+:q
+package
+compile
+package
+run
+compile
+package
+inspect
+inspect sm
+inspect name
+inspect dependencies
+inspect build-dependencies
+inspect resolver
+inspect resolvers
+run
+run*
+run
+package
+run
+package
+run
+compile
+run
+compile
+run
+compile
+test
+clea
+clean
+compile
+clean compile
+clean
+compile
+run
+test
+package
+test
+clean
+package
+test
+clean
+clean test
+test
+clean 
+test
+clean 
+package
+test
+clean
+test
+clean
+test
+console
+test
