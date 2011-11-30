@@ -58,10 +58,21 @@ class FunctorTestSuite extends FunSuite {
    // test functor composition. Here, compose List with Option, and vice versa.
    test("FunctorComposition") {
       val xs  = List(Some(4), Some(6), Some(5), None, Some(6))
-      val F = Functor[List].compose(Functor[Option])
-      val ys = F.map(xs)(1 +)
+      val FLOpt = Functor[List].compose(Functor[Option])
+      
+      expect(List(Some(5), Some(7), Some(6), None, Some(7))){
+         FLOpt.map(xs)(1 +)
+      }
+ 
+      val FOptL = Functor[Option].compose(Functor[List])
+      
+      val ys:Option[List[Int]] = Some(List(1, 4, 5))
 
-      assert(ys == List(Some(5), Some(7), Some(6), None, Some(7)))
+      expect(Some(List(2, 5, 6))) {
+         FOptL.map(ys)(1 +)
+      }
+
+      
    }
 
   
