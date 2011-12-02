@@ -7,12 +7,13 @@ import scalaz._
 class BiFunctorTestSuite extends FunSuite {
 
    import Scalaz._
+
    test("BiFunctor Either") {
       
       val xEith:Either[String,Int] = Right(6)
 
+      // incr is applied to Right, and upper to Left.
       val upper = (s:String)=>s.toUpperCase
-      
       val incr = (x:Int) => x + 1
 
       expect(Right(7)) {
@@ -25,7 +26,6 @@ class BiFunctorTestSuite extends FunSuite {
       }
 
       val BF = BiFunctor[Either] 
-      
       expect(Left("BOOM")) {
          BF.leftFunctor.map(yEith)(upper)
       }
@@ -39,6 +39,7 @@ class BiFunctorTestSuite extends FunSuite {
       val incr = (x:Int) => x + 1
       val len = (s:String) => s.length
 
+      // incr is applied to the first element, and upper is applied to the second element
       expect((2, "HELP")) {
          x.bimap(incr, upper)
       }
