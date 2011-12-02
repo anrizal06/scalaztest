@@ -59,7 +59,9 @@ class FunctorTestSuite extends FunSuite {
    test("FunctorComposition") {
       val xs  = List(Some(4), Some(6), Some(5), None, Some(6))
       val FLOpt = Functor[List].compose(Functor[Option])
-      
+   
+      // When an element is a Some, then the map result is the incremented value (due to 1 +)
+      // of the boxed integer.
       expect(List(Some(5), Some(7), Some(6), None, Some(7))){
          FLOpt.map(xs)(1 +)
       }
