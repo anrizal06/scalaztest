@@ -1,4 +1,3 @@
-
 package org.riv.scalaztest
 
 import org.scalatest.FunSuite
@@ -91,6 +90,7 @@ class BiFunctorTestSuite extends FunSuite {
 
    }
 
+   // Uniformly map each element of a tuple. 
    test("BiFunctor umap") {
       val BF = BiFunctor[Tuple2]
 
@@ -101,5 +101,7 @@ class BiFunctorTestSuite extends FunSuite {
       expect((6,7)) {
          BF.umap(t)(incr)
       }
+      
+      // Note that, BF.umap((6,"7")) does not compile.
    }
 }
