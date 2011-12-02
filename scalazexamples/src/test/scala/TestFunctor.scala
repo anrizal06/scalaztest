@@ -95,7 +95,7 @@ class FunctorTestSuite extends FunSuite {
    }
 
 
-   // test functor tuple. The map is only for the last element of tuple. 
+   // test functor tuple. The map is applied only to the last element of tuple. 
    test("FunctorTuple") {
 
       val incr:Int=>Int = x => x + 1
