@@ -23,7 +23,7 @@ class BiFunctorTestSuite extends FunSuite {
       val yEith:Either[String,Int] = Left("boom")
       expect(Left("BOOM")) {
         yEith.bimap(upper,incr)
-      }
+      }      
 
       val BF = BiFunctor[Either] 
       
@@ -100,6 +100,18 @@ class BiFunctorTestSuite extends FunSuite {
       
       expect((6,7)) {
          BF.umap(t)(incr)
+      }
+   }
+
+   test("<-: and :->") {
+     
+      val t = (5, 6)
+
+      val incr:Int=>Int = 1 +
+      val double:Int=>Int = 2 *
+
+      expect((6, 12)) {
+         incr <-: t :-> double
       }
    }
 }

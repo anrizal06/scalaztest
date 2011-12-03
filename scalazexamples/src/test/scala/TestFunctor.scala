@@ -7,7 +7,7 @@ import scalaz._
 class FunctorTestSuite extends FunSuite {
    import Scalaz._
 
-   test("OptionFunctor") {
+   test("Option Functor") {
       val xOpt:Option[Int] = Some(4)
     
       expect(Some(5)) {
@@ -22,7 +22,7 @@ class FunctorTestSuite extends FunSuite {
    // Test Either as a functor.
    // map will apply the function when the instance of the Either instance is a Right.
    // Otherwise, it keeps the instance as it is.
-   test("EitherFunctor") {
+   test("Either Functor") {
 
       val xEith:Either[String,Int] = Right(6)
       
@@ -45,7 +45,7 @@ class FunctorTestSuite extends FunSuite {
    }
 
    // map applied to a function is actually a function composition
-   test("FunctionFunctor") {
+   test("Function Functor") {
       val f:Int=>Int  = 1 + 
       val g:Int=>Int  = 2 * 
       val h:Int=>Int  = 3 *
@@ -56,7 +56,7 @@ class FunctorTestSuite extends FunSuite {
    }
 
    // test functor composition. Here, compose List with Option, and vice versa.
-   test("FunctorComposition") {
+   test("Functor Composition") {
       val xs  = List(Some(4), Some(6), Some(5), None, Some(6))
       val FLOpt = Functor[List].compose(Functor[Option])
       
@@ -71,12 +71,10 @@ class FunctorTestSuite extends FunSuite {
       expect(Some(List(2, 5, 6))) {
          FOptL.map(ys)(1 +)
       }
-
-      
    }
 
   
-   test("FunctorProduct") {
+   test("Functor Product") {
       val yEith: Either[String,Int] = Right(10)
       val zEith: Either[String,Int] = Left("Error")
 
@@ -94,7 +92,7 @@ class FunctorTestSuite extends FunSuite {
 
 
    // test functor tuple. The map is only for the last element of tuple. 
-   test("FunctorTuple") {
+   test("Tuple Functor") {
 
       val incr:Int=>Int = x => x + 1
       val t1 = (1,"hello")
@@ -145,7 +143,7 @@ class FunctorTestSuite extends FunSuite {
       }     
    }
 
-   test("Functor Stream") {
+   test("Stream Functor") {
        expect(List(5, 6, 7)) {
           Functor[Stream].map(Stream.from(4))(1 +).take(3).toList
        }
