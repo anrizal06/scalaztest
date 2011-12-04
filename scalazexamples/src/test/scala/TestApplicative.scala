@@ -14,8 +14,6 @@ class ApplicativeFunctorTestSuite extends FunSuite {
 
       val incr:Int=>Int = 1 +
 
-      val AOPT = Applicative[Option]
-
       expect(Some(4)) {      
          xOpt <*> some(incr)
       }
