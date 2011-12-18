@@ -23,7 +23,7 @@ class ApplicativeFunctorTestSuite extends FunSuite {
       val xNone = none
 
       val incr:Int=>Int = 1 +
-
+      
       val AOPT = Applicative[Option]
 
       expect(Some(4)) {      
