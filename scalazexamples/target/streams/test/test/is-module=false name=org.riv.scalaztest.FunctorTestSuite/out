@@ -1,0 +1,9 @@
+[0m[[0minfo[0m] [0m[32mFunctorTestSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- Option Functor[0m[0m
+[0m[[0minfo[0m] [0m[32m- Either Functor[0m[0m
+[0m[[0minfo[0m] [0m[32m- Function Functor[0m[0m
+[0m[[0minfo[0m] [0m[32m- Functor Composition[0m[0m
+[0m[[0minfo[0m] [0m[32m- Functor Product[0m[0m
+[0m[[0minfo[0m] [0m[32m- Tuple Functor[0m[0m
+[0m[[0minfo[0m] [0m[32m- Stream Functor[0m[0m
+[0m[[0minfo[0m] [0m[32m- StrengthL and StrengthR[0m[0m

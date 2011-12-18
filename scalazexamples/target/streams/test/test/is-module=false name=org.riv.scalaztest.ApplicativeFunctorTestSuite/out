@@ -1,0 +1,6 @@
+[0m[[0minfo[0m] [0m[32mApplicativeFunctorTestSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- Test ap Option[0m[0m
+[0m[[0minfo[0m] [0m[32m- Applicative Functor List[0m[0m
+[0m[[0minfo[0m] [0m[32m- Lifting Option[0m[0m
+[0m[[0minfo[0m] [0m[32m- Applicative appF[0m[0m
+[0m[[0minfo[0m] [0m[32m- Applicative Either[0m[0m

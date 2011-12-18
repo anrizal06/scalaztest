@@ -1,0 +1,17 @@
+test
+clean
+test
+clean
+ls
+test
+clean
+test
+clean
+test
+clean
+compile
+test
+package
+repl
+help
+test

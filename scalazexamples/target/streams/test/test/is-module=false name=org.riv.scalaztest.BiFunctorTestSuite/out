@@ -1,0 +1,8 @@
+[0m[[0minfo[0m] [0m[32mBiFunctorTestSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- BiFunctor Either[0m[0m
+[0m[[0minfo[0m] [0m[32m- BiFunctor Tuple[0m[0m
+[0m[[0minfo[0m] [0m[32m- BiFunctor leftFunctor[0m[0m
+[0m[[0minfo[0m] [0m[32m- BiFunctor rightFunctor[0m[0m
+[0m[[0minfo[0m] [0m[32m- BiFunctor LeftMap RightMap[0m[0m
+[0m[[0minfo[0m] [0m[32m- BiFunctor umap[0m[0m
+[0m[[0minfo[0m] [0m[32m- <-: and :->[0m[0m
